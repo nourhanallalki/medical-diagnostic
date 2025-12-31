@@ -1,0 +1,49 @@
+{% extends 'diagnostic/base.html' %}
+
+{% block content %}
+<div class="auth-page">
+    <div class="auth-image-side">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=1200&fit=crop" alt="Medical Login">
+        <div class="auth-image-overlay">
+            <h2>🏥 مرحباً بعودتك</h2>
+            <p>سجل دخولك للوصول إلى نظام التشخيص الذكي</p>
+        </div>
+    </div>
+    
+    <div class="auth-form-side">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="login-icon">🔐</div>
+                <h2>تسجيل الدخول</h2>
+                <p class="subtitle">أدخل بياناتك للمتابعة</p>
+            </div>
+            
+            <form method="post">
+                {% csrf_token %}
+                
+                {% for field in form %}
+                    <div class="form-field">
+                        <label>
+                            {% if field.name == 'username' %}👤{% endif %}
+                            {% if field.name == 'password' %}🔒{% endif %}
+                            {{ field.label }}
+                        </label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <div class="error">{{ field.errors }}</div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                
+                <button type="submit" class="btn-primary">
+                    <span>🚀</span> دخول
+                </button>
+            </form>
+            
+            <p class="auth-switch">
+                ليس لديك حساب؟ <a href="{% url 'diagnostic:register' %}">إنشاء حساب جديد</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

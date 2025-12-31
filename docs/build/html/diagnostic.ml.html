@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>diagnostic.ml package &mdash; Documentation Medical Diagnostic System 0.1</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=af8511e3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Medical Diagnostic System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">diagnostic.ml package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-diagnostic.ml.process">diagnostic.ml.process module</a><ul>
+<li><a class="reference internal" href="#diagnostic.ml.process.load_model"><code class="docutils literal notranslate"><span class="pre">load_model()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.ml.process.predict_disease"><code class="docutils literal notranslate"><span class="pre">predict_disease()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.ml.process.prepare_input"><code class="docutils literal notranslate"><span class="pre">prepare_input()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-diagnostic.ml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Medical Diagnostic System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">diagnostic.ml package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/diagnostic.ml.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="diagnostic-ml-package">
+<h1>diagnostic.ml package<a class="headerlink" href="#diagnostic-ml-package" title="Lien vers cette rubrique"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien vers cette rubrique"></a></h2>
+</section>
+<section id="module-diagnostic.ml.process">
+<span id="diagnostic-ml-process-module"></span><h2>diagnostic.ml.process module<a class="headerlink" href="#module-diagnostic.ml.process" title="Lien vers cette rubrique"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.ml.process.load_model">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.ml.process.</span></span><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/ml/process.html#load_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.ml.process.load_model" title="Lien vers cette définition"></a></dt>
+<dd><p>Charge le modèle ML entraîné</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.ml.process.predict_disease">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.ml.process.</span></span><span class="sig-name descname"><span class="pre">predict_disease</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symptoms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/ml/process.html#predict_disease"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.ml.process.predict_disease" title="Lien vers cette définition"></a></dt>
+<dd><p>Prédit les maladies possibles avec probabilités</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.ml.process.prepare_input">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.ml.process.</span></span><span class="sig-name descname"><span class="pre">prepare_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symptoms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/ml/process.html#prepare_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.ml.process.prepare_input" title="Lien vers cette définition"></a></dt>
+<dd><p>Convertit les symptômes en vecteur pour le modèle</p>
+</dd></dl>
+
+</section>
+<section id="module-diagnostic.ml">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-diagnostic.ml" title="Lien vers cette rubrique"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, Medical Diagnostic.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

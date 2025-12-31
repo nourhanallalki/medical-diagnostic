@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: medical-diagnostic
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn medical_diagnostic.wsgi:application"
+```
+

@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>diagnostic package &mdash; Documentation Medical Diagnostic System 0.1</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=af8511e3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Medical Diagnostic System
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">diagnostic package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-diagnostic.admin">diagnostic.admin module</a><ul>
+<li><a class="reference internal" href="#diagnostic.admin.DiagnosticHistoryAdmin"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistoryAdmin</span></code></a><ul>
+<li><a class="reference internal" href="#diagnostic.admin.DiagnosticHistoryAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistoryAdmin.list_display</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.admin.DiagnosticHistoryAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistoryAdmin.list_filter</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.admin.DiagnosticHistoryAdmin.media"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistoryAdmin.media</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.admin.DiagnosticHistoryAdmin.readonly_fields"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistoryAdmin.readonly_fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.admin.DiagnosticHistoryAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistoryAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-diagnostic.apps">diagnostic.apps module</a><ul>
+<li><a class="reference internal" href="#diagnostic.apps.DiagnosticConfig"><code class="docutils literal notranslate"><span class="pre">DiagnosticConfig</span></code></a><ul>
+<li><a class="reference internal" href="#diagnostic.apps.DiagnosticConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">DiagnosticConfig.default_auto_field</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.apps.DiagnosticConfig.name"><code class="docutils literal notranslate"><span class="pre">DiagnosticConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.apps.DiagnosticConfig.verbose_name"><code class="docutils literal notranslate"><span class="pre">DiagnosticConfig.verbose_name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-diagnostic.forms">diagnostic.forms module</a><ul>
+<li><a class="reference internal" href="#diagnostic.forms.LoginForm"><code class="docutils literal notranslate"><span class="pre">LoginForm</span></code></a><ul>
+<li><a class="reference internal" href="#diagnostic.forms.LoginForm.base_fields"><code class="docutils literal notranslate"><span class="pre">LoginForm.base_fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.LoginForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">LoginForm.declared_fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.LoginForm.media"><code class="docutils literal notranslate"><span class="pre">LoginForm.media</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm"><code class="docutils literal notranslate"><span class="pre">RegisterForm</span></code></a><ul>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm.Meta"><code class="docutils literal notranslate"><span class="pre">RegisterForm.Meta</span></code></a><ul>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm.Meta.fields"><code class="docutils literal notranslate"><span class="pre">RegisterForm.Meta.fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm.Meta.labels"><code class="docutils literal notranslate"><span class="pre">RegisterForm.Meta.labels</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm.Meta.model"><code class="docutils literal notranslate"><span class="pre">RegisterForm.Meta.model</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm.base_fields"><code class="docutils literal notranslate"><span class="pre">RegisterForm.base_fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">RegisterForm.declared_fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.RegisterForm.media"><code class="docutils literal notranslate"><span class="pre">RegisterForm.media</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#diagnostic.forms.SymptomForm"><code class="docutils literal notranslate"><span class="pre">SymptomForm</span></code></a><ul>
+<li><a class="reference internal" href="#diagnostic.forms.SymptomForm.SYMPTOM_CHOICES"><code class="docutils literal notranslate"><span class="pre">SymptomForm.SYMPTOM_CHOICES</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.SymptomForm.base_fields"><code class="docutils literal notranslate"><span class="pre">SymptomForm.base_fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.SymptomForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">SymptomForm.declared_fields</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.forms.SymptomForm.media"><code class="docutils literal notranslate"><span class="pre">SymptomForm.media</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-diagnostic.models">diagnostic.models module</a><ul>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory</span></code></a><ul>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.DoesNotExist</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.MultipleObjectsReturned</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.confidence"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.confidence</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.created_at"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.created_at</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.get_next_by_created_at"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.get_next_by_created_at()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.get_previous_by_created_at"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.get_previous_by_created_at()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.id"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.id</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.objects"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.objects</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.predicted_disease"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.predicted_disease</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.symptoms"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.symptoms</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.user"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.user</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.models.DiagnosticHistory.user_id"><code class="docutils literal notranslate"><span class="pre">DiagnosticHistory.user_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-diagnostic.urls">diagnostic.urls module</a></li>
+<li><a class="reference internal" href="#module-diagnostic.views">diagnostic.views module</a><ul>
+<li><a class="reference internal" href="#diagnostic.views.history"><code class="docutils literal notranslate"><span class="pre">history()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.views.index"><code class="docutils literal notranslate"><span class="pre">index()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.views.predict"><code class="docutils literal notranslate"><span class="pre">predict()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.views.user_login"><code class="docutils literal notranslate"><span class="pre">user_login()</span></code></a></li>
+<li><a class="reference internal" href="#diagnostic.views.user_logout"><code class="docutils literal notranslate"><span class="pre">user_logout()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-diagnostic">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Medical Diagnostic System</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">diagnostic package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/diagnostic.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="diagnostic-package">
+<h1>diagnostic package<a class="headerlink" href="#diagnostic-package" title="Lien vers cette rubrique"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Lien vers cette rubrique"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="diagnostic.migrations.html">diagnostic.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic.migrations.html#module-diagnostic.migrations.0001_initial">diagnostic.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="diagnostic.migrations.html#diagnostic.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="diagnostic.migrations.html#diagnostic.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostic.migrations.html#diagnostic.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostic.migrations.html#diagnostic.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic.migrations.html#module-diagnostic.migrations.0002_diagnostichistory_user">diagnostic.migrations.0002_diagnostichistory_user module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="diagnostic.migrations.html#diagnostic.migrations.0002_diagnostichistory_user.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="diagnostic.migrations.html#diagnostic.migrations.0002_diagnostichistory_user.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostic.migrations.html#diagnostic.migrations.0002_diagnostichistory_user.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic.migrations.html#module-diagnostic.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostic.ml.html">diagnostic.ml package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic.ml.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic.ml.html#module-diagnostic.ml.process">diagnostic.ml.process module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="diagnostic.ml.html#diagnostic.ml.process.load_model"><code class="docutils literal notranslate"><span class="pre">load_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="diagnostic.ml.html#diagnostic.ml.process.predict_disease"><code class="docutils literal notranslate"><span class="pre">predict_disease()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="diagnostic.ml.html#diagnostic.ml.process.prepare_input"><code class="docutils literal notranslate"><span class="pre">prepare_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="diagnostic.ml.html#module-diagnostic.ml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien vers cette rubrique"></a></h2>
+</section>
+<section id="module-diagnostic.admin">
+<span id="diagnostic-admin-module"></span><h2>diagnostic.admin module<a class="headerlink" href="#module-diagnostic.admin" title="Lien vers cette rubrique"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="diagnostic.admin.DiagnosticHistoryAdmin">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">diagnostic.admin.</span></span><span class="sig-name descname"><span class="pre">DiagnosticHistoryAdmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/admin.html#DiagnosticHistoryAdmin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.admin.DiagnosticHistoryAdmin" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.admin.DiagnosticHistoryAdmin.list_display">
+<span class="sig-name descname"><span class="pre">list_display</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['predicted_disease',</span> <span class="pre">'confidence',</span> <span class="pre">'symptoms',</span> <span class="pre">'created_at']</span></em><a class="headerlink" href="#diagnostic.admin.DiagnosticHistoryAdmin.list_display" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.admin.DiagnosticHistoryAdmin.list_filter">
+<span class="sig-name descname"><span class="pre">list_filter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['predicted_disease',</span> <span class="pre">'created_at']</span></em><a class="headerlink" href="#diagnostic.admin.DiagnosticHistoryAdmin.list_filter" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="diagnostic.admin.DiagnosticHistoryAdmin.media">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#diagnostic.admin.DiagnosticHistoryAdmin.media" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.admin.DiagnosticHistoryAdmin.readonly_fields">
+<span class="sig-name descname"><span class="pre">readonly_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['created_at']</span></em><a class="headerlink" href="#diagnostic.admin.DiagnosticHistoryAdmin.readonly_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.admin.DiagnosticHistoryAdmin.search_fields">
+<span class="sig-name descname"><span class="pre">search_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['symptoms',</span> <span class="pre">'predicted_disease']</span></em><a class="headerlink" href="#diagnostic.admin.DiagnosticHistoryAdmin.search_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-diagnostic.apps">
+<span id="diagnostic-apps-module"></span><h2>diagnostic.apps module<a class="headerlink" href="#module-diagnostic.apps" title="Lien vers cette rubrique"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="diagnostic.apps.DiagnosticConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">diagnostic.apps.</span></span><span class="sig-name descname"><span class="pre">DiagnosticConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/apps.html#DiagnosticConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.apps.DiagnosticConfig" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.apps.DiagnosticConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#diagnostic.apps.DiagnosticConfig.default_auto_field" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.apps.DiagnosticConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'diagnostic'</span></em><a class="headerlink" href="#diagnostic.apps.DiagnosticConfig.name" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.apps.DiagnosticConfig.verbose_name">
+<span class="sig-name descname"><span class="pre">verbose_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Diagnostic</span> <span class="pre">Médical'</span></em><a class="headerlink" href="#diagnostic.apps.DiagnosticConfig.verbose_name" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-diagnostic.forms">
+<span id="diagnostic-forms-module"></span><h2>diagnostic.forms module<a class="headerlink" href="#module-diagnostic.forms" title="Lien vers cette rubrique"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="diagnostic.forms.LoginForm">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">diagnostic.forms.</span></span><span class="sig-name descname"><span class="pre">LoginForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/forms.html#LoginForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.forms.LoginForm" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">AuthenticationForm</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.LoginForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'password':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#diagnostic.forms.LoginForm.base_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.LoginForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'password':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#diagnostic.forms.LoginForm.declared_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="diagnostic.forms.LoginForm.media">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#diagnostic.forms.LoginForm.media" title="Lien vers cette définition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">diagnostic.forms.</span></span><span class="sig-name descname"><span class="pre">RegisterForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/forms.html#RegisterForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.forms.RegisterForm" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">UserCreationForm</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm.Meta">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/diagnostic/forms.html#RegisterForm.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.forms.RegisterForm.Meta" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['username',</span> <span class="pre">'email',</span> <span class="pre">'password1',</span> <span class="pre">'password2']</span></em><a class="headerlink" href="#diagnostic.forms.RegisterForm.Meta.fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm.Meta.labels">
+<span class="sig-name descname"><span class="pre">labels</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'password1':</span> <span class="pre">'كلمة</span> <span class="pre">المرور',</span> <span class="pre">'password2':</span> <span class="pre">'تأكيد</span> <span class="pre">كلمة</span> <span class="pre">المرور',</span> <span class="pre">'username':</span> <span class="pre">'اسم</span> <span class="pre">المستخدم'}</span></em><a class="headerlink" href="#diagnostic.forms.RegisterForm.Meta.labels" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#diagnostic.forms.RegisterForm.Meta.model" title="Lien vers cette définition"></a></dt>
+<dd><p>alias de <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#diagnostic.forms.RegisterForm.base_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#diagnostic.forms.RegisterForm.declared_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="diagnostic.forms.RegisterForm.media">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#diagnostic.forms.RegisterForm.media" title="Lien vers cette définition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="diagnostic.forms.SymptomForm">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">diagnostic.forms.</span></span><span class="sig-name descname"><span class="pre">SymptomForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_order=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/forms.html#SymptomForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.forms.SymptomForm" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.SymptomForm.SYMPTOM_CHOICES">
+<span class="sig-name descname"><span class="pre">SYMPTOM_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('fever',</span> <span class="pre">'Fièvre'),</span> <span class="pre">('cough',</span> <span class="pre">'Toux'),</span> <span class="pre">('headache',</span> <span class="pre">'Mal</span> <span class="pre">de</span> <span class="pre">tête'),</span> <span class="pre">('fatigue',</span> <span class="pre">'Fatigue'),</span> <span class="pre">('sore_throat',</span> <span class="pre">'Mal</span> <span class="pre">de</span> <span class="pre">gorge'),</span> <span class="pre">('shortness_of_breath',</span> <span class="pre">'Essoufflement'),</span> <span class="pre">('chest_pain',</span> <span class="pre">'Douleur</span> <span class="pre">thoracique'),</span> <span class="pre">('nausea',</span> <span class="pre">'Nausée'),</span> <span class="pre">('vomiting',</span> <span class="pre">'Vomissements'),</span> <span class="pre">('diarrhea',</span> <span class="pre">'Diarrhée')]</span></em><a class="headerlink" href="#diagnostic.forms.SymptomForm.SYMPTOM_CHOICES" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.SymptomForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'symptoms':</span> <span class="pre">&lt;django.forms.fields.MultipleChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#diagnostic.forms.SymptomForm.base_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.forms.SymptomForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'symptoms':</span> <span class="pre">&lt;django.forms.fields.MultipleChoiceField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#diagnostic.forms.SymptomForm.declared_fields" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="diagnostic.forms.SymptomForm.media">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#diagnostic.forms.SymptomForm.media" title="Lien vers cette définition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-diagnostic.models">
+<span id="diagnostic-models-module"></span><h2>diagnostic.models module<a class="headerlink" href="#module-diagnostic.models" title="Lien vers cette rubrique"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">diagnostic.models.</span></span><span class="sig-name descname"><span class="pre">DiagnosticHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symptoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicted_disease</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/models.html#DiagnosticHistory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.models.DiagnosticHistory" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.DoesNotExist" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.MultipleObjectsReturned" title="Lien vers cette définition"></a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.confidence">
+<span class="sig-name descname"><span class="pre">confidence</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.confidence" title="Lien vers cette définition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.created_at" title="Lien vers cette définition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.get_next_by_created_at">
+<span class="sig-name descname"><span class="pre">get_next_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.get_next_by_created_at" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.get_previous_by_created_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_created_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.get_previous_by_created_at" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.id" title="Lien vers cette définition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.objects" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.predicted_disease">
+<span class="sig-name descname"><span class="pre">predicted_disease</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.predicted_disease" title="Lien vers cette définition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.symptoms">
+<span class="sig-name descname"><span class="pre">symptoms</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.symptoms" title="Lien vers cette définition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.user" title="Lien vers cette définition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="diagnostic.models.DiagnosticHistory.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#diagnostic.models.DiagnosticHistory.user_id" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-diagnostic.urls">
+<span id="diagnostic-urls-module"></span><h2>diagnostic.urls module<a class="headerlink" href="#module-diagnostic.urls" title="Lien vers cette rubrique"></a></h2>
+</section>
+<section id="module-diagnostic.views">
+<span id="diagnostic-views-module"></span><h2>diagnostic.views module<a class="headerlink" href="#module-diagnostic.views" title="Lien vers cette rubrique"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.views.history">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.views.</span></span><span class="sig-name descname"><span class="pre">history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/views.html#history"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.views.history" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.views.index">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.views.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/views.html#index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.views.index" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.views.predict">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.views.</span></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/views.html#predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.views.predict" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.views.register">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.views.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/views.html#register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.views.register" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.views.user_login">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.views.</span></span><span class="sig-name descname"><span class="pre">user_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/views.html#user_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.views.user_login" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diagnostic.views.user_logout">
+<span class="sig-prename descclassname"><span class="pre">diagnostic.views.</span></span><span class="sig-name descname"><span class="pre">user_logout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/diagnostic/views.html#user_logout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#diagnostic.views.user_logout" title="Lien vers cette définition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-diagnostic">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-diagnostic" title="Lien vers cette rubrique"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2025, Medical Diagnostic.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

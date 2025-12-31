@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Diagnostic Médical{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'diagnostic/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>🏥 MedDiagnostic AI</h1>
+            <div class="nav-links">
+                {% if user.is_authenticated %}
+                    <span class="user-name">مرحباً، {{ user.username }}</span>
+                    <a href="{% url 'diagnostic:index' %}">الرئيسية</a>
+                    <a href="{% url 'diagnostic:history' %}">سجلي</a>
+                    <a href="{% url 'diagnostic:logout' %}">خروج</a>
+                {% else %}
+                    <a href="{% url 'diagnostic:login' %}">دخول</a>
+                    <a href="{% url 'diagnostic:register' %}">إنشاء حساب</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 MedDiagnostic AI - Pour information uniquement</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{% extends 'diagnostic/base.html' %}
+
+{% block content %}
+<div class="auth-page">
+    <div class="auth-image-side">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=1200&fit=crop" alt="Medical Register">
+        <div class="auth-image-overlay">
+            <h2>✨ انضم إلينا</h2>
+            <p>أنشئ حساباً وابدأ رحلتك مع نظام التشخيص الذكي</p>
+        </div>
+    </div>
+    
+    <div class="auth-form-side">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="register-icon">✨</div>
+                <h2>إنشاء حساب جديد</h2>
+                <p class="subtitle">املأ البيانات التالية للتسجيل</p>
+            </div>
+            
+            <form method="post">
+                {% csrf_token %}
+                
+                {% for field in form %}
+                    <div class="form-field">
+                        <label>
+                            {% if field.name == 'username' %}👤{% endif %}
+                            {% if field.name == 'email' %}📧{% endif %}
+                            {% if 'password' in field.name %}🔒{% endif %}
+                            {{ field.label }}
+                        </label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <div class="error">{{ field.errors }}</div>
+                        {% endif %}
+                        {% if field.help_text %}
+                            <small class="help-text">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                
+                <button type="submit" class="btn-primary">
+                    <span>🎉</span> إنشاء الحساب
+                </button>
+            </form>
+            
+            <p class="auth-switch">
+                لديك حساب بالفعل؟ <a href="{% url 'diagnostic:login' %}">تسجيل الدخول</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
