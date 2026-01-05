@@ -7,18 +7,20 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-'django.contrib.admin',
-'django.contrib.auth',
-'django.contrib.contenttypes',
-'django.contrib.sessions',
-'django.contrib.messages',
-'django.contrib.staticfiles',
-'diagnostic',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+   'diagnostic.apps.DiagnosticConfig',
+    
 ]
 
 MIDDLEWARE = [
 'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiceMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 'django.contrib.sessions.middleware.SessionMiddleware',
 'django.middleware.common.CommonMiddleware',
 'django.middleware.csrf.CsrfViewMiddleware',
